@@ -64,6 +64,8 @@ Skill aktivoituu automaattisesti seuraavassa Claude Code -sessiossa.
      references/
        kielioppi.md
        patterns.md
+     custom_references/    # valinnainen: omat lisäreferenssit
+     custom_rules/         # valinnainen: omat lisäsäännöt
    ```
 
 ---
@@ -103,9 +105,38 @@ suomettaja/
   references/
     patterns.md             # Kaikki 26 AI-patternia esimerkkeineen
     kielioppi.md            # Kielitoimiston ohjepankin säännöt
+  custom_references/        # Omat lisäreferenssit (brändin ääni, sanastot)
+    README.md
+  custom_rules/             # Omat lisäsäännöt (kielletyt sanat, termit)
+    README.md
   README.md
   LICENSE
 ```
+
+---
+
+## Mukautukset
+
+Voit laajentaa Suomettajaa omilla tiedostoilla ilman että pohjaskilliä muokataan. Kaksi kansiota:
+
+- **`custom_references/`** — kuvaileva taustamateriaali: brändin ääni, sanastot, hyvät esimerkit, kohdeyleisön kuvaus
+- **`custom_rules/`** — käskevät direktiivit: kielletyt sanat, pakolliset termit, projektikohtaiset tyylivalinnat
+
+Lisää vain `.md`-tiedostoja kansioihin. Suomettaja lukee ne automaattisesti seuraavassa käytössä.
+
+**Esimerkki:**
+
+```
+custom_rules/
+  brandin_termit.md    # "Acme Cloud" ei "acme cloud" tai "Acme-pilvi"
+  kielletyt_sanat.md   # "ratkaisu", "innovatiivinen", "helppo"
+```
+
+**Sääntöhierarkia:** Kielioppi ja oikeinkirjoitus (`references/`) ovat aina voimassa. Omat säännöt (`custom_rules/`) voivat tiukentaa tyylivalintoja mutta eivät ohittaa kielioppisääntöjä.
+
+Tarkemmat ohjeet ja esimerkit: [`custom_references/README.md`](custom_references/README.md) ja [`custom_rules/README.md`](custom_rules/README.md).
+
+**Versionhallinta.** Omat tiedostot on ignoroitu `.gitignore`ssa, joten `git pull` ei riko mukautuksiasi.
 
 ---
 

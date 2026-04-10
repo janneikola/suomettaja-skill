@@ -184,6 +184,31 @@ Suomessa kirjoitetaan **pienellä**:
 
 ---
 
+## Mukautukset
+
+<customizations>
+Suomettajaa voi laajentaa käyttäjäkohtaisilla tiedostoilla ilman että pohjaskilliä muokataan. Kaksi kansiota:
+
+- **`custom_references/`** — Omat lisäreferenssit (kuvaileva taustamateriaali): brändin ääni, sanastot, hyvät esimerkkitekstit, kohdeyleisön kuvaus.
+- **`custom_rules/`** — Omat lisäsäännöt (käskevät direktiivit): kielletyt sanat, pakolliset termit, brändin kirjoitusasut, projektikohtaiset tyylivalinnat.
+
+**Lataus.** Ennen kuin aloitat tekstin käsittelyn, tarkista molemmat kansiot ja lue kaikki niissä olevat `.md`-tiedostot `README.md`-tiedostoa lukuun ottamatta. Jos kansio on tyhjä (vain README), jatka ilman mukautuksia.
+
+**Sääntöhierarkia** (tärkeysjärjestyksessä, ylin ensin):
+
+1. **Käyttäjän istuntokohtaiset ohjeet** — jos käyttäjä antaa ristiriitaisen ohjeen nyt, noudata sitä.
+2. **Kielioppi ja oikeinkirjoitus** (`references/kielioppi.md`) — ei ohitettavissa. Nämä ovat kielen sääntöjä, eivät tyylivalintoja.
+3. **AI-patternit** (`references/patterns.md`) — pohjavoimassa aina.
+4. **`custom_rules/`** — projektikohtaiset tyylivalinnat ja reunaehdot. Voivat tiukentaa tai ohittaa pohjaskillin tyylivalintoja (esim. "älä käytä passiivia koskaan" tai "käytä aina sinuttelua"), mutta eivät kielioppisääntöjä.
+5. **`custom_references/`** — konsultoitavaa taustatietoa, ei pakottavaa.
+
+**Ristiriidat.** Jos `custom_rules/` on ristiriidassa kieliopin kanssa (esim. "kirjoita 'verkko sivusto' erikseen"), kysy käyttäjältä ennen kuin toimit. Älä tuota kielioppivirheitä.
+
+**Raportointi.** Kun mukautuksia on käytetty, mainitse muutosyhteenvedossa mistä lähteestä sääntö tuli (esim. "brändin termistö: custom_rules/brandin_termit.md").
+</customizations>
+
+---
+
 ## Prosessi
 
 <process>
@@ -199,7 +224,12 @@ Käsittele suoraan. Aja molemmat vaiheet (luonnollistaminen + kielenhuolto) ja p
 3. Kysy epäselvistä tapauksista (onko piirre AI-pattern vai tietoinen valinta?)
 4. Toteuta korjaukset
 
-### 7-vaiheinen tarkistusprosessi
+### Tarkistusprosessi
+
+**Vaihe 0: Mukautusten lataus**
+- Tarkista `custom_references/` ja `custom_rules/` -kansiot
+- Lue kaikki `.md`-tiedostot (paitsi `README.md`)
+- Pidä mielessä projektikohtaiset säännöt ja termit kaikissa seuraavissa vaiheissa
 
 **Vaihe 1: AI-patternien tunnistus**
 - Lue teksti ja merkitse AI-patternit (ks. references/patterns.md)
@@ -232,10 +262,15 @@ Käsittele suoraan. Aja molemmat vaiheet (luonnollistaminen + kielenhuolto) ja p
 - Lisää persoonallisuutta (rytmi, partikkelit, konkreettisuus)
 - Säilytä asiasisältö ja rekisteri
 
-**Vaihe 7: Yhteenveto**
+**Vaihe 7: Mukautusten tarkistus**
+- Käy teksti läpi `custom_rules/`-kansion sääntöjen valossa
+- Varmista brändin termistö, kielletyt sanat ja pakolliset korvaukset
+- Jos sääntö on ristiriidassa kieliopin kanssa, kysy käyttäjältä
+
+**Vaihe 8: Yhteenveto**
 - Palauta korjattu teksti kokonaisuudessaan
-- Listaa tehdyt muutokset (AI-patternit + kielioppikorjaukset)
-- Perustele korjaukset tarvittaessa viittaamalla sääntöihin
+- Listaa tehdyt muutokset (AI-patternit + kielioppikorjaukset + mukautusten mukaiset muutokset)
+- Perustele korjaukset tarvittaessa viittaamalla sääntöihin, myös `custom_rules/`-tiedostoihin
 </process>
 
 ---
@@ -252,8 +287,9 @@ Kun olet käsitellyt tekstin, palauta:
 
 Jos käyttäjä pyytää vain tekstiä ilman selityksiä, jätä muutosyhteenveto pois.
 
-Jos käyttäjä pyytää pelkkää oikolukua/kielioppia (ei luonnollistamista), aja vain vaiheet 2–5.
-Jos käyttäjä pyytää pelkkää luonnollistamista (ei oikolukua), aja vaiheet 1 ja 6.
+Jos käyttäjä pyytää pelkkää oikolukua/kielioppia (ei luonnollistamista), aja vaiheet 0, 2–5, 7 ja 8.
+Jos käyttäjä pyytää pelkkää luonnollistamista (ei oikolukua), aja vaiheet 0, 1, 6, 7 ja 8.
+Vaiheet 0 (mukautusten lataus), 7 (mukautusten tarkistus) ja 8 (yhteenveto) ajetaan aina.
 </output_format>
 
 ---
@@ -276,8 +312,13 @@ Jos käyttäjä pyytää pelkkää luonnollistamista (ei oikolukua), aja vaiheet
 
 ## Referenssit
 
+**Pohjatiedostot (pakolliset, aina voimassa):**
 - **references/patterns.md** — Täysi 26 AI-patternin lista esimerkkeineen (Hakku/finnish-humanizer)
 - **references/kielioppi.md** — Kielitoimiston ohjepankkiin perustuva sääntökokoelma (akunikkola/suomi-finnish-skill)
+
+**Käyttäjän mukautukset (valinnaiset, ladataan automaattisesti):**
+- **custom_references/** — Omat lisäreferenssit: brändin ääni, sanastot, esimerkit. Ks. `custom_references/README.md`.
+- **custom_rules/** — Omat lisäsäännöt: kielletyt sanat, pakolliset termit, projektikohtaiset tyylivalinnat. Ks. `custom_rules/README.md`.
 
 Alkuperäiset lähteet:
 - [Hakku/finnish-humanizer](https://github.com/Hakku/finnish-humanizer) (MIT)
