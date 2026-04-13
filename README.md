@@ -1,6 +1,6 @@
-# Suomettaja — Finnish Language Editing Skill for Claude Code
+# Suomettaja — Finnish Language Editing Skill for Claude Code, Codex and any other AI that supports skills
 
-A Claude Code skill that improves Finnish text quality. Removes AI-generated patterns, enforces grammar rules from Kielitoimiston ohjepankki, and naturalizes robotic-sounding content into authentic Finnish voice.
+A skill that improves Finnish text quality. Removes AI-generated patterns, enforces grammar rules from Kielitoimiston ohjepankki, and naturalizes robotic-sounding content into authentic Finnish voice.
 
 ---
 
