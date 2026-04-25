@@ -1,6 +1,6 @@
 # Finnish Humanizer: Täysi patternilista
 
-Kaikki 26 AI-patternia esimerkkeineen. SKILL.md sisältää 6 kanonista esimerkkiä; tämä tiedosto sisältää loput.
+Kaikki 27 AI-patternia esimerkkeineen. SKILL.md sisältää kanoniset esimerkit; tämä tiedosto sisältää loput.
 
 ## Sisällysluettelo
 
@@ -32,6 +32,7 @@ Kaikki 26 AI-patternia esimerkkeineen. SKILL.md sisältää 6 kanonista esimerkk
   - [24. Negatiivinen rinnastus](#24-negatiivinen-rinnastus)
   - [25. Keinotekoiset skaalaviittaukset](#25-keinotekoiset-skaalaviittaukset)
   - [26. Tietokatkos-vastuuvapauslausekkeet](#26-tietokatkos-vastuuvapauslausekkeet)
+  - [27. Kontrastiivinen kieltorakenne](#27-kontrastiivinen-kieltorakenne)
 - [Tyylimerkinnät](#tyylimerkinnät)
 - [Täysimittainen esimerkki](#täysimittainen-esimerkki)
 
@@ -275,6 +276,38 @@ Jälkeen: Markkinatilanne on muuttunut viime vuosina.
 
 Ennen: Saatavilla olevien tietojen perusteella voidaan todeta, että kehitys on ollut positiivista.
 Jälkeen: Kehitys on ollut positiivista.
+
+### 27. Kontrastiivinen kieltorakenne
+
+AI käyttää korostuskeinona "ei X, vaan Y" -rakennetta tai sen variaatioita: kahdella erillisellä lauseella ("Tämä ei ole X. Se on Y.") tai jatkuvalla ("Kyse ei ole X:stä, kyse on Y:stä."). Englanniksi sama pattern on "It's not X. It's Y." Tämä on yksi tunnistetuimmista AI-tunnusmerkeistä erityisesti markkinoinnissa, opetussisällöissä ja LinkedIn-postauksissa.
+
+Erotuksena patternista #24 (negatiivinen rinnastus, "ei pelkästään...vaan myös") tämä on määrittelevä tai korjaava: ensin kielletään yksi luonnehdinta, sitten tarjotaan toinen sen tilalle.
+
+**Tunnistus:**
+- "Ei X, vaan Y."
+- "Tämä ei ole X. Se on Y."
+- "Kyse ei ole X:stä, kyse on Y:stä."
+- "X ei ole oikea sana. Y on."
+- "Ei pelkkä X. Vaan Y." (lyhennetty muoto)
+
+**Tärkeää: korjaus ei saa olla sama pattern toiseen suuntaan.** Kierrätettyjä rakenteita kuten "Y, ei X" tai "Y ratkaisee, ei X" ovat sama pattern eri sanajärjestyksessä.
+
+**Korjausstrategia:** Pudota kieltolause kokonaan ja totea positiivinen suoraan. Jos kontrasti on aidosti tarpeellinen, kirjoita kahdella eri lauserakenteella eri kulmasta.
+
+Ennen: Tämä ei ole vitsi. Se on toistuva kuvio.
+Jälkeen: Se on toistuva kuvio.
+
+Ennen: Ei isompi malli, vaan enemmän ajatteluaikaa.
+Jälkeen: Ratkaisu löytyy ajatteluajasta.
+
+Ennen: Kyse ei ole nopeudesta, vaan tarkkuudesta.
+Jälkeen: Tarkkuus ratkaisee.
+
+Ennen: Ei dokumenttien kirjoittamista, vaan ajattelun haastamista.
+Jälkeen: Olennaisinta on ajattelun haastaminen.
+
+Ennen: Tämä ei ole pelkkä työkalu. Se on koko liiketoiminnan perusta.
+Jälkeen: Työkalusta on tullut koko liiketoiminnan perusta.
 
 ---
 
