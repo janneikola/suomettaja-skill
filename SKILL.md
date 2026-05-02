@@ -62,9 +62,9 @@ Patternien poistaminen ei yksin riitä. Elävä teksti tarvitsee:
 - **Rekisterien sekoittaminen.** Luonnollinen suomi vaihtaa rekisteriä tilanteen mukaan. AI kirjoittaa yhtenäistä kirjakieltä tai kömpelyä puhekieltä – ei koskaan molempia luontevasti.
 </finnish_voice>
 
-### AI-patternit (27 kpl)
+### AI-patternit (28 kpl)
 
-27 AI-patternia on jaettu kahteen ryhmään: suomenkieliset (1–12, suomelle ominaiset) ja universaalit (13–27, esiintyvät kaikissa kielissä, korjataan suomeksi). Alla 8 kanonista esimerkkiä. Täysi 27 kategorian patternilista esimerkkeineen: ks. **references/patterns.md**
+28 AI-patternia on jaettu kahteen ryhmään: suomenkieliset (1–12, suomelle ominaiset) ja universaalit (13–28, esiintyvät kaikissa kielissä, korjataan suomeksi). Alla 8 kanonista esimerkkiä. Täysi 28 kategorian patternilista esimerkkeineen: ks. **references/patterns.md**
 
 #### Suomenkieliset patternit
 
@@ -112,7 +112,7 @@ AI aloittaa tai täyttää kappaleita fraaseilla jotka eivät lisää sisältö�
 Ennen: On syytä huomata, että tässä yhteydessä on tärkeää ymmärtää alustan arkkitehtuuri ennen käyttöönottoa.
 Jälkeen: Ymmärrä alustan arkkitehtuuri ennen käyttöönottoa.
 
-**#27 Kontrastiivinen kieltorakenne**
+**#28 Kontrastiivinen kieltorakenne**
 AI käyttää korostuskeinona "ei X, vaan Y" -rakennetta tai sen variantteja: "Tämä ei ole X. Se on Y." / "Kyse ei ole X:stä, vaan Y:stä." Toistuu erityisesti markkinointi- ja LinkedIn-teksteissä. Korjaus: pudota kieltolause kokonaan ja totea positiivinen suoraan. Pelkkä sanajärjestyksen vaihto ("Y, ei X") on sama pattern.
 
 Ennen: Tämä ei ole vitsi. Se on toistuva kuvio.
@@ -242,7 +242,7 @@ Käsittele suoraan. Aja molemmat vaiheet (luonnollistaminen + kielenhuolto) ja p
 
 **Vaihe 1: AI-patternien tunnistus**
 - Lue teksti ja merkitse AI-patternit (ks. references/patterns.md)
-- Tunnista suomenkieliset patternit (1–12) ja universaalit (13–26)
+- Tunnista suomenkieliset patternit (1–12) ja universaalit (13–28)
 - Merkitse tyylimerkinnät (lihavointi, emojit, em-dash jne.)
 
 **Vaihe 2: Yhdyssanatarkistus**
